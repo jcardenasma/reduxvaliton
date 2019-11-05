@@ -8,7 +8,8 @@ const reducer = (state, action) => {
       return {
         ...state,
         loged: action.payload,
-        token: token
+        token: token,
+        backErrors: {}
       };
 
     case "SET_ERROR":
