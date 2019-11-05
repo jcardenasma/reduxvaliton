@@ -1,0 +1,39 @@
+.header {
+  align-items: center;
+  background: #8f57fd;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+
+.navbar {
+  margin: auto;
+  background-color: white;
+  height: 80px;
+}
+.navbar img {
+  width: 150px;
+}
+.navbar a {
+  color: #000000;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar a {
+    color: white;
+  }
+  .navbar ul {
+    width: 50%;
+    background-color: #62259d;
+    padding-left: 8px;
+  }
+  .principal {
+    width: 650px;
+  }
+  .navbar li {
+    border-bottom: 0.1px solid white;
+  }
+}

@@ -1,0 +1,99 @@
+.contenedor {
+  max-width: 450px;
+  height: 400px;
+  margin: auto;
+  margin-top: 5%;
+  background: #f1e4e4;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgb(42, 41, 41, 0.34);
+}
+img {
+  display: flex;
+  margin: auto;
+  padding-top: 3%;
+  margin-bottom: -5px;
+  width: 130px;
+  align-content: center;
+}
+hr {
+  width: 35%;
+  border: 1px solid rgb(42, 41, 41, 0.1);
+}
+.formulario .form-group {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding-top: 15px;
+}
+.formulario input[type="text"],
+.formulario input[type="password"] {
+  width: 90%;
+  height: 34px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.formulario .icono {
+  padding-top: 5px;
+  font-size: 125%;
+  color: black;
+  padding-right: 7px;
+}
+.alerta {
+  color: red;
+}
+.formulario .alerta {
+  margin-left: 25px;
+  margin-top: 5%;
+}
+.botones {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.boton {
+  width: 70%;
+  height: 40px;
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  background: #62259d;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.boton:hover {
+  background: rgb(100, 93, 112, 0.5);
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    max-width: 250px;
+    height: 350px;
+    margin-top: 25%;
+  }
+  img {
+    width: 100px;
+  }
+  .formulario input[type="text"],
+  .formulario input[type="password"] {
+    height: 30px;
+  }
+  .formulario .alerta {
+    margin-left: 15px;
+  }
+  .boton {
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+  }
+}
