@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export const loginReques = payload => ({
   type: "LOGIN_REQUEST",
   payload
@@ -11,8 +10,19 @@ export const maritimoRequest = payload => ({
   payload
 });
 
+export const terrestreRequest = payload => ({
+  type: "TERRESTRE_REQUEST",
+  payload
+});
+
 export const setError = payload => ({
   type: "SET_ERROR",
+  payload
+});
+
+export const logOut = payload => (
+  {
+  type: "LOGOUT_REQUEST",
   payload
 });
 
@@ -53,6 +63,21 @@ export const getMaritimo = payload => {
       })
       .then(function(response) {
         dispatch(maritimoRequest(response.data));
+      });
+  };
+};
+
+export const getTerrestre = payload => {
+  return dispatch => {
+    axios
+      .get(`https://apirestvaliton.herokuapp.com/embarqueTer/${payload}`, {
+        auth: {
+          username: "system",
+          password: "Sys1638"
+        }
+      })
+      .then(function(response) {
+        dispatch(terrestreRequest(response.data));
       });
   };
 };
