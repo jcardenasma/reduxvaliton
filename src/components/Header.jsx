@@ -39,7 +39,7 @@ const Header = props => {
             id="navbarTogglerDemo02"
           >
             <ul className="navbar-nav">
-            <li className="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to="/maritimo">
                   MARITIMO
                 </Link>
