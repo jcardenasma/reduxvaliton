@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Login from "../pages/Login";
 import Maritimo from "../pages/Maritimo";
 import PrivateRoute from "../utils/PrivateRoute";
+import Terrestre from "../pages/Terrestre";
 
 const App = () => (
   <BrowserRouter>
@@ -12,6 +13,9 @@ const App = () => (
         <Route exact path="/" component={Login} />
         <PrivateRoute path="/maritimo">
           <Maritimo />
+        </PrivateRoute>
+        <PrivateRoute path="/terrestre">
+          <Terrestre />
         </PrivateRoute>
       </Switch>
     </Layout>

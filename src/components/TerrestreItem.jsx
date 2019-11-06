@@ -34,7 +34,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content">
                 <p className="timeline-content-date">ETA</p>
-                <p>{eta}</p>
+                <p>{fechaCarga}</p>
               </div>
             </div>
 
@@ -44,7 +44,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content right">
                 <p className="timeline-content-date">FROM</p>
-                <p>{pol}</p>
+                <p>{origen}</p>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content">
                 <p className="timeline-content-date">ETD</p>
-                <p>{etd}</p>
+                <p>{fechaDescarga}</p>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content right">
                 <p className="timeline-content-date">TO</p>
-                <p>{pod}</p>
+                <p>{destino}</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content">
                 <p className="timeline-content-date">BOOKING</p>
-                <p>{mbl}</p>
+                <p>{idFileTer}</p>
               </div>
             </div>
 
@@ -84,7 +84,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content right">
                 <p className="timeline-content-date"> HBL</p>
-                <p>{hbl}</p>
+                <p>{mercancia}</p>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content">
                 <p className="timeline-content-date">CONTAINER NUMBERS</p>
-                <p>{contenedores}</p>
+                <p>{operacion}</p>
               </div>
             </div>
 
@@ -105,8 +105,7 @@ const TerrestreItem = ({
               <div className="timeline-content right">
                 <p className="timeline-content-date">CONTAINER TYPE</p>
                 <p>
-                  CNT20: {cntr20DC}, CNT40DC: {cntr40DC}, CNT40HQ: {cntr40HQ},
-                  CNTLCL: {cntrLCL}
+                {tipoCaja}
                 </p>
               </div>
             </div>
@@ -117,7 +116,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content">
                 <p className="timeline-content-date">SHIPING</p>
-                <p>{naviera}</p>
+                <p>{lineaint}</p>
               </div>
             </div>
 
@@ -127,7 +126,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content right">
                 <p className="timeline-content-date">TYPE</p>
-                <p>{tipo}</p>
+                <p>{tipoMovimiento}</p>
               </div>
             </div>
 
@@ -137,7 +136,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content">
                 <p className="timeline-content-date">VOYAJE</p>
-                <p>{viaje}</p>
+                <p>{rutaNac}</p>
               </div>
             </div>
             <div className="timeline-item">
@@ -146,7 +145,7 @@ const TerrestreItem = ({
               </div>
               <div className="timeline-content right">
                 <p className="timeline-content-date">FILE</p>
-                <p>MAR{idFile}</p>
+                <p>{rutaInt}</p>
               </div>
             </div>
             <div className="timeline-item">

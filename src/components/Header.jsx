@@ -8,9 +8,8 @@ import "../assets/styles/components/Header.css";
 import logo from "../assets/static/valitoncorp_logo.png";
 
 const Header = props => {
-
   const handleSubmit = event => {
-     props.logOut();
+    props.logOut();
   };
 
   const { loged } = props;
@@ -40,6 +39,11 @@ const Header = props => {
             id="navbarTogglerDemo02"
           >
             <ul className="navbar-nav">
+            <li className="nav-item">
+                <Link className="nav-link" to="/maritimo">
+                  MARITIMO
+                </Link>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/terrestre">
                   TERRESTRE
@@ -51,12 +55,12 @@ const Header = props => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link"  to="/terrestre">
+                <Link className="nav-link" to="/terrestre">
                   FACTURAS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" onClick = {handleSubmit} to="/">
+                <Link className="nav-link" onClick={handleSubmit} to="/">
                   SALIR
                 </Link>
               </li>

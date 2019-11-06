@@ -4,7 +4,7 @@ import { getTerrestre } from "../actions";
 import TerrestreItem from "../components/TerrestreItem";
 
 const Terrestre = props => {
-  const { embarquesTerr } = props;
+  useState(() => props.getTerrestre(props.loged.clave));
 
   const [input, setValues] = useState({
     busqueda: null,
@@ -19,11 +19,8 @@ const Terrestre = props => {
         ...input,
         alert: false,
         consulta: true,
-        filtrados: embarquesTerr.filter(
-          Terrestre =>
-          Terrestre.idFileTer === Number(input.busqueda) ||
-          Terrestre.origen.toLowerCase() === input.busqueda ||
-          Terrestre.destino.toLowerCase() === input.busqueda
+        filtrados: props.embarquesTerr.filter(
+          Terrestre => Terrestre.idFileTer.toLowerCase() === input.busqueda
         )
       });
     } else setValues({ ...input, filtrados: [], alert: true });
@@ -38,7 +35,7 @@ const Terrestre = props => {
 
   return (
     <div className="text-center mt-5">
-      <h1>Traking results</h1>
+      <h1>Traking results land </h1>
       <div className="d-flex justify-content-center">
         <div>
           <input
@@ -46,7 +43,7 @@ const Terrestre = props => {
             type="text"
             onChange={handleFinderChange}
             className="form-control"
-            placeholder="Container / transport doc"
+            placeholder="IdTerr / From"
             aria-label="Recipient's username"
           ></input>
         </div>
@@ -60,7 +57,7 @@ const Terrestre = props => {
       <div>
         {input.alert && (
           <div className="alert alert-danger" role="alert">
-            You must enter a container or transport document number to search
+            You must enter a reference land to search
           </div>
         )}
       </div>
@@ -83,12 +80,13 @@ const Terrestre = props => {
 
 const MapStateProps = state => {
   return {
-    embarquesTerr: state.embarquesTerr
+    embarquesTerr: state.embarquesTerr,
+    loged: state.loged
   };
 };
 
 const mapDispathToProps = {
-    getTerrestre
+  getTerrestre
 };
 
 export default connect(

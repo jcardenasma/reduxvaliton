@@ -103,7 +103,8 @@ const MaritimoItem = ({
               <div className="timeline-content right">
                 <p className="timeline-content-date">CONTAINER TYPE</p>
                 <p>
-                  CNT20: {cntr20DC}, CNT40DC: {cntr40DC}, CNT40HQ: {cntr40HQ},
+                  CNT20: {cntr20DC} <br></br> CNT40DC: {cntr40DC}
+                  <br></br>CNT40HQ: {cntr40HQ} <br></br>
                   CNTLCL: {cntrLCL}
                 </p>
               </div>
@@ -114,7 +115,7 @@ const MaritimoItem = ({
                 <i className="fas fa-ship"></i>
               </div>
               <div className="timeline-content">
-                <p className="timeline-content-date">SHIPING</p>
+                <p className="timeline-content-date">SHIPPING</p>
                 <p>{naviera}</p>
               </div>
             </div>
