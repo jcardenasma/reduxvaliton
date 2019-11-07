@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { getTerrestre } from "../actions";
 import TerrestreItem from "../components/TerrestreItem";
+import '../assets/styles/components/Traking.css';
 
 const Terrestre = props => {
   useState(() => props.getTerrestre(props.loged.clave));
@@ -34,12 +35,13 @@ const Terrestre = props => {
   };
 
   return (
-    <div className="text-center mt-5">
+    <div className="text-center traking">
       <h1>Traking results land </h1>
       <div className="d-flex justify-content-center">
         <div>
           <input
-            name="filter"
+            id = "date"
+            name="filterT"
             type="text"
             onChange={handleFinderChange}
             className="form-control"
