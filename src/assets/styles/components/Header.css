@@ -12,7 +12,8 @@
 .navbar {
   margin: auto;
   background-color: white;
-  height: 80px;
+  height: 75px;
+  box-shadow: 0px 4px 5px rgba(98, 37, 157, 0.25);
 }
 .navbar img {
   width: 150px;

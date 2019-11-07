@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { getMaritimo } from "../actions";
 import MaritimoItem from "../components/MaritimoItem";
+import '../assets/styles/components/Traking.css';
 
 const Maritimo = props => {
   const { embarquesMar } = props;
@@ -38,11 +39,13 @@ const Maritimo = props => {
   };
 
   return (
-    <div className="text-center mt-5">
-      <h1>Traking results</h1>
+    <>
+    <div className="text-center traking">
+      <h1 className="">Traking results</h1>
       <div className="d-flex justify-content-center">
         <div>
           <input
+            id = "date"
             name="filter"
             type="text"
             onChange={handleFinderChange}
@@ -57,7 +60,6 @@ const Maritimo = props => {
           </button>
         </div>
       </div>
-
       <div>
         {input.alert && (
           <div className="alert alert-danger" role="alert">
@@ -65,20 +67,21 @@ const Maritimo = props => {
           </div>
         )}
       </div>
-      {input.consulta && (
+    </div>
+    {input.consulta && (
         <div>
           {input.filtrados[0] ? (
             input.filtrados.map(item => (
               <MaritimoItem key={item.idFile} {...item} />
             ))
           ) : (
-            <div className="alert alert-danger" role="alert">
-              No results found
+              <div className="alert alert-danger" role="alert">
+                No results found
             </div>
-          )}
+            )}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
