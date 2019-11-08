@@ -72,7 +72,7 @@ const Header = props => {
   } else {
     return (
       <header>
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg fixed-top">
           <a
             className="navbar-brand"
             href="http://valcal.appadministracion.com/"

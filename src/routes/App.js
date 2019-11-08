@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import Maritimo from "../pages/Maritimo";
 import PrivateRoute from "../utils/PrivateRoute";
 import Terrestre from "../pages/Terrestre";
+import NotFound from "../pages/NotFound";
+
 
 const App = () => (
   <BrowserRouter>
@@ -17,6 +19,7 @@ const App = () => (
         <PrivateRoute path="/terrestre">
           <Terrestre />
         </PrivateRoute>
+        <Route component={NotFound} />
       </Switch>
     </Layout>
   </BrowserRouter>
