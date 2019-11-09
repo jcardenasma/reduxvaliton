@@ -14,7 +14,7 @@ const Login = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    props.sendLogin(form, "/maritimo", props.history);
+    props.sendLogin('login', form, "/maritimo", props.history);
   };
 
   //Agregando informacion al formulario

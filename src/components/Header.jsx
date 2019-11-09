@@ -55,7 +55,7 @@ const Header = props => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/terrestre">
+                <Link className="nav-link" to="/facturas">
                   FACTURAS
                 </Link>
               </li>
