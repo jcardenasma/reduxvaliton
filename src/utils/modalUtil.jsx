@@ -17,7 +17,7 @@ const Toggle = ({ toggle, content }) => {
 
 const Modal = ({ children }) =>
   ReactDOM.createPortal(
-    <div>{children}</div>,
+    <div className="modalDialog">{children}</div>,
     document.getElementById("modal")
   );
 

@@ -1,36 +1,47 @@
-.traking{
-margin-top: 100px;
+.principal {
+  margin: auto;
+  text-align: center;
+  width: 1600px;
+  margin-top: 85px;
+}
+
+.traking {
+  margin-top: 100px;
 }
 
 .traking input {
-     width: 220px;
-     font-size: 16px;
-     outline: none;
+  width: 220px;
+  font-size: 16px;
+  outline: none;
 }
 .traking input:focus {
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 #date::placeholder {
-    color: rgb(98, 37, 157, .70);
-    text-align: center;
-    font-size: 17px;
-  }
+  color: rgb(98, 37, 157, 0.7);
+  text-align: center;
+  font-size: 17px;
+}
 .traking button {
-      background-color: #8f57fd;;
-  }
+  background-color: #8f57fd;
+}
 .traking button:focus {
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .traking i {
-      color: white;
-  }
+  color: white;
+}
 
-  
+@media screen and (max-width: 1400px) {
+  .principal {
+    width: 85%;
+  }
+}
