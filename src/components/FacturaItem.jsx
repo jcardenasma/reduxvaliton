@@ -2,30 +2,35 @@ import React from "react";
 import "../assets/styles/components/FacturaItem.css";
 
 const FacturaItem = (props) => {
+
+  const callback = () =>{
+    props.HandelHide();
+  }
+
   return (
     <div className="modalprincipal">
       <div className="submodal">
-        <p>EMPRESA FACTURA</p>
+        <p>{props.empresa}</p>
       </div>
       <div className="modalcontenido">
         <div className="cuadrotexto" style={{justifyContent: "space-between"}}>
           <div>
-            <p>No Factura</p>
+            <p>{props.noFactura}</p>
           </div>
           <div>
-            <p>Fecha Factura</p>
+            <p>{props.fechaFact}</p>
           </div>
         </div>
         <div className="row">
           <div className="col-5">
             <p>
-              <b>File: </b> <span className="salto">A-556552</span>
+              <b>File: </b> <span className="salto">{props.noFile}</span>
             </p>
           </div>
           <div className="col-7">
             <p>
               <b>Tipo Comprobante: </b>
-              <span className="salto">I-trasferencia</span>
+              <span className="salto">{props.tipoComprobante}</span>
             </p>
           </div>
         </div>
@@ -47,13 +52,13 @@ const FacturaItem = (props) => {
           <div className="col-5">
             <p>
               <b>Importe: </b>
-              <span className="salto">13.54</span>
+              <span className="salto">{props.importeFact}</span>
             </p>
           </div>
           <div className="col-7 ">
             <p>
               <b>Divisa: </b>
-              <span className="salto">USD</span>
+              <span className="salto">{props.codigoDivisa}</span>
             </p>
           </div>
         </div>
@@ -61,9 +66,9 @@ const FacturaItem = (props) => {
       <hr />
       <div className="botonmodal">
         <div>
-          <button className="cancelar" href="#Close" onClick={props.HandelHide,console.log("no puelo")}>
+          <a className="cancelar" href="#Close" onClick={callback}>
             SALIR
-          </button>
+          </a>
         </div>
       </div>
     </div>
