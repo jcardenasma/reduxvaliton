@@ -41,7 +41,7 @@ const Maritimo = props => {
   return (
     <>
     <div className="text-center traking">
-      <h1 className="">Traking results</h1>
+      <h1 className="">Maritimo-Tracking</h1>
       <div className="d-flex justify-content-center">
         <div>
           <input

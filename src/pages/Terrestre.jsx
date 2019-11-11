@@ -36,7 +36,7 @@ const Terrestre = props => {
 
   return (
     <div className="text-center traking">
-      <h1>Traking results land </h1>
+      <h1>Land-Tracking </h1>
       <div className="d-flex justify-content-center">
         <div>
           <input

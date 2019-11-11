@@ -28,9 +28,9 @@ const TerrestreItem = ({
       <div className="imgabout">
         <div className="timeline">
 
-        <div className="timeline-item">
+          <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-calendar-alt"></i>
+            <i class="fas fa-file-alt"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">OPERACION</p>
@@ -40,7 +40,7 @@ const TerrestreItem = ({
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-calendar-alt"></i>
+            <i class="fas fa-file"></i>
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">TIPO MOVIMIENTO</p>
@@ -50,7 +50,7 @@ const TerrestreItem = ({
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-ship"></i>
+            <i class="fas fa-shipping-fast"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">TIPO CAJA</p>
@@ -70,7 +70,7 @@ const TerrestreItem = ({
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-ship"></i>
+            <i class="fas fa-truck-moving"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">ORIGEN</p>
@@ -90,7 +90,7 @@ const TerrestreItem = ({
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-ship"></i>
+            <i class="fas fa-truck-moving"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">DESTINO</p>
@@ -113,80 +113,32 @@ const TerrestreItem = ({
               <i className="fas fa-receipt"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date"> LINEA INTERNACIONAL</p>
+              <p className="timeline-content-date">LINEA INTERNACIONAL</p>
               <p>{lineaint}</p>
             </div>
           </div>
-
+          
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-pallet"></i>
+              <i class="fas fa-boxes"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">CONTAINER NUMBERS</p>
-              <p>{operacion}</p>
+              <p className="timeline-content-date">MERCANCIA</p>
+              <p>{mercancia}</p>
             </div>
           </div>
+
 
           <div className="timeline-item">
             <div className="timeline-icon">
               <i className="fas fa-kaaba"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">CONTAINER TYPE</p>
-              <p>
-                {tipoCaja}
-              </p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i className="fas fa-ship"></i>
-            </div>
-            <div className="timeline-content right">
-              <p className="timeline-content-date">SHIPING</p>
-              <p>{lineaint}</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i className="fas fa-kaaba"></i>
-            </div>
-            <div className="timeline-content">
-              <p className="timeline-content-date">TYPE</p>
-              <p>{tipoMovimiento}</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i className="fas fa-ship"></i>
-            </div>
-            <div className="timeline-content right">
-              <p className="timeline-content-date">VOYAJE</p>
-              <p>{rutaNac}</p>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i className="fas fa-clipboard-list"></i>
-            </div>
-            <div className="timeline-content">
-              <p className="timeline-content-date">FILE</p>
-              <p>{rutaInt}</p>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i className="fas fa-kaaba"></i>
-            </div>
-            <div className="timeline-content right">
               <p className="timeline-content-date">STATUS</p>
               <p>{status}</p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
