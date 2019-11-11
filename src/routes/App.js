@@ -6,6 +6,7 @@ import Maritimo from "../pages/Maritimo";
 import PrivateRoute from "../utils/PrivateRoute";
 import Terrestre from "../pages/Terrestre";
 import NotFound from "../pages/NotFound";
+import Factruas from "../pages/Facturas";
 
 
 const App = () => (
@@ -18,6 +19,9 @@ const App = () => (
         </PrivateRoute>
         <PrivateRoute path="/terrestre">
           <Terrestre />
+        </PrivateRoute>
+        <PrivateRoute path="/facturas">
+          <Factruas />
         </PrivateRoute>
         <Route component={NotFound} />
       </Switch>

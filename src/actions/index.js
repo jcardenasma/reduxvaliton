@@ -1,3 +1,4 @@
+import { URL, AUTH } from "../utils/GlobalConet";
 import axios from "axios";
 
 export const loginReques = payload => ({
@@ -15,33 +16,35 @@ export const terrestreRequest = payload => ({
   payload
 });
 
+export const facturasRequest = payload => ({
+  type: "FACTURAS_REQUEST",
+  payload
+});
+
+
 export const setError = payload => ({
   type: "SET_ERROR",
   payload
 });
 
-export const logOut = payload => (
-  {
+export const logOut = payload => ({
   type: "LOGOUT_REQUEST",
   payload
 });
 
-export const sendLogin = (payload, redirectURL, history) => {
+export const sendLogin = (section, payload, redirectURL, history) => {
   return dispatch => {
     axios
       .post(
-        "https://apirestvaliton.herokuapp.com/login",
+        `${URL}${section}`,
         { rfc: payload.username, password: payload.password },
         {
-          auth: {
-            username: "system",
-            password: "Sys1638"
-          }
+          auth: AUTH
         }
       )
       .then(({ data }) => {
         dispatch(loginReques(data));
-        dispatch(getMaritimo(data.clave));
+        dispatch(getMaritimo("embarque", data.clave));
       })
       .then(() => {
         history.push(redirectURL);
@@ -52,14 +55,11 @@ export const sendLogin = (payload, redirectURL, history) => {
   };
 };
 
-export const getMaritimo = payload => {
+export const getMaritimo = (section, payload) => {
   return dispatch => {
     axios
-      .get(`https://apirestvaliton.herokuapp.com/embarque/${payload}`, {
-        auth: {
-          username: "system",
-          password: "Sys1638"
-        }
+      .get(`${URL}${section}/${payload}`, {
+        auth: AUTH
       })
       .then(function(response) {
         dispatch(maritimoRequest(response.data));
@@ -67,17 +67,26 @@ export const getMaritimo = payload => {
   };
 };
 
-export const getTerrestre = payload => {
+export const getTerrestre = (section, payload) => {
   return dispatch => {
     axios
-      .get(`https://apirestvaliton.herokuapp.com/embarqueTer/${payload}`, {
-        auth: {
-          username: "system",
-          password: "Sys1638"
-        }
+      .get(`${URL}${section}/${payload}`, {
+        auth: AUTH
       })
       .then(function(response) {
         dispatch(terrestreRequest(response.data));
       });
   };
 };
+
+export const getFacturas = (section, payload) =>{
+  return dispatch => {
+    axios
+      .get(`${URL}${section}/${payload}`, {
+        auth: AUTH
+      })
+      .then(function(response) {
+        dispatch(facturasRequest(response.data));
+      });
+  };
+}

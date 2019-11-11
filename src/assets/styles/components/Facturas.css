@@ -1,0 +1,44 @@
+.titulotabla {
+  width: 100%;
+  height: 39px;
+  background: #c4c4c4;
+}
+.contenido {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #62259d;
+  text-align: center;
+}
+.contenido i {
+  font-size: 25px;
+}
+
+th {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+td {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 14px;
+  align-items: center;
+  color: #000000;
+}
+
+.pdf {
+  color: red;
+}
+
+@media screen and (max-width:960px){
+    .prioridad1{
+        display: none;
+    }
+   }

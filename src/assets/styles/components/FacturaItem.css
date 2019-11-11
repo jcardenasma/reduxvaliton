@@ -1,0 +1,100 @@
+.modalprincipal {
+  width: 680px;
+  position: relative;
+  margin: 10% auto;
+  border-radius: 10px;
+  background: #eeeeee;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+.submodal {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 4px 5px rgba(98, 37, 157, 0.25);
+  height: 50px;
+}
+.submodal p {
+  padding-top: 12px;
+  text-align: center;
+}
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalcontenido {
+  margin-top: 25px;
+  padding-left: 33px;
+  padding-right: 15px;
+}
+.cuadrotexto {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.par {
+  display: flex;
+}
+span {
+  word-wrap: break-word;
+}
+b {
+  font-size: 18px;
+}
+
+hr {
+  margin-top: 5px;
+  width: 100%;
+  border: 0.8px solid #62259d;
+}
+.botonmodal {
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.cancelar {
+  padding: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 28px;
+  text-decoration: none;
+  color: rgb(194, 0, 0, 0.6);
+}
+.cancelar:hover {
+  color: rgb(194, 0, 0);
+}
+
+@media screen and (max-width: 960px) {
+  .modalprincipal {
+    width: 85%;
+  }
+  .cancelar {
+    padding: 25px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .modalcontenido {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contenido i {
+    font-size: 18px;
+  }
+  b {
+    font-size: 15px;
+  }
+  span {
+    font-size: 13px;
+  }
+  span.salto::before {
+    content: "\A";
+    white-space: pre;
+  }
+}

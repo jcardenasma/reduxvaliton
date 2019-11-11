@@ -5,7 +5,7 @@ import TerrestreItem from "../components/TerrestreItem";
 import '../assets/styles/components/Traking.css';
 
 const Terrestre = props => {
-  useState(() => props.getTerrestre(props.loged.clave));
+  useState(() => props.getTerrestre('embarqueTer',props.loged.clave));
 
   const [input, setValues] = useState({
     busqueda: null,

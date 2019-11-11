@@ -2,7 +2,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "LOGIN_REQUEST":
       let da = new Date();
-      let token = da.getTime() +  100 * (16 * 60 * 60);
+      let token = da.getTime() + 100 * (16 * 60 * 60);
       return {
         ...state,
         loged: action.payload,
@@ -25,8 +25,12 @@ const reducer = (state, action) => {
         ...state,
         embarquesTerr: action.payload
       };
+    case "FACTURAS_REQUEST":
+      return {
+        ...state,
+        facturas: action.payload
+      };
     case "LOGOUT_REQUEST":
-      console.log("ya")
       return {
         ...state,
         loged: {},
