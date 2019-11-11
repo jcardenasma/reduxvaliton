@@ -58,7 +58,8 @@ const FacturaItem = (props) => {
           </div>
         </div>
       </div>
-      <hr />
+      <div className = "facturahr"><hr/></div>
+      
       <div className="botonmodal">
         <div>
           <button className="cancelar" href="#Close" onClick={props.HandelHide,console.log("no puelo")}>

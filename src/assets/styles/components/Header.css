@@ -20,6 +20,9 @@
 }
 .navbar a {
   color: #000000;
+  font-weight: bolder;
+  font-size: 17px;
+
 }
 
 @media screen and (max-width: 960px) {

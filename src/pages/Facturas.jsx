@@ -39,7 +39,7 @@ const Factruas = props => {
   return (
     <div className="principal">
       <div className="text-center traking">
-        <h1> Invoices Statement </h1>
+        <h1>Invoices Statement</h1>
         <div className="d-flex justify-content-center">
           <div>
             <input
@@ -60,7 +60,7 @@ const Factruas = props => {
         </div>
       </div>
       <div style={{ textAlign: "left", marginTop: "45px" }}>
-        <table style={{ width: "100%" }}>
+        <table style={{ width: "100%"}}>
           <thead>
             <tr className="titulotabla">
               <th>No Factura</th>
@@ -107,7 +107,7 @@ const Factruas = props => {
                   </a>
                 </td>
                 <td>
-                  <a
+                  <a className = "xml"
                     download={`${item.noFactura}.xml`}
                     href={`data:application/octet-stream;base64,${item.xmlEncode}`}
                   >
