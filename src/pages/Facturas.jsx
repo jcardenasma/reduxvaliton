@@ -8,7 +8,9 @@ import "../assets/styles/components/Facturas.css";
 import FacturaItem from "../components/FacturaItem";
 
 const Factruas = props => {
-  useState(() => props.getFacturas("getFacturas", props.loged.clave));
+  useState(() => {
+    props.getFacturas("getFacturas", props.loged.clave)
+  });
 
   const [input, setValues] = useState({
     busqueda: null,
@@ -28,7 +30,7 @@ const Factruas = props => {
         ...input,
         filtrados: props.facturas.filter(
           factura =>
-            factura.noFile === Number(input.busqueda) ||
+            factura.noFile.toLowerCase() === input.busqueda ||
             factura.noFactura.toLowerCase() === input.busqueda ||
             factura.fechaFact.toLowerCase() === input.busqueda
         )
@@ -92,7 +94,7 @@ const Factruas = props => {
                     )}
                     content={hide => (
                       <Modal>
-                        <FacturaItem HandelHide={hide}/>
+                        <FacturaItem {...item} HandelHide={hide} />
                       </Modal>
                     )}
                   />
