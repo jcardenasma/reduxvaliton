@@ -61,7 +61,7 @@ const Factruas = props => {
           </div>
         </div>
       </div>
-      <div style={{ textAlign: "left", marginTop: "45px" }}>
+      <div className= "tablafactura">
         <table style={{ width: "100%"}}>
           <thead>
             <tr className="titulotabla">
