@@ -38,13 +38,13 @@ const FacturaItem = (props) => {
           <div className="col-5">
             <p>
               <b>Origen: </b>
-              <span className="salto">Guadalajara</span>
+  <span className="salto">{props.portLoading}</span>
             </p>
           </div>
           <div className="col-7">
             <p>
               <b>Destino: </b>
-              <span className="salto">Manzanillo</span>
+  <span className="salto">{props.portDischarge}</span>
             </p>
           </div>
         </div>

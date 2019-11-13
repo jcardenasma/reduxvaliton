@@ -37,8 +37,8 @@ const Factruas = props => {
       });
     } else setValues({ ...input, filtrados: props.facturas });
   };
-
-  return (
+         
+  return ( /*INICIO DEL BOTON */
     <div className="principal">
       <div className="text-center traking">
         <h1>Invoices Statement</h1>
