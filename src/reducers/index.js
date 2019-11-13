@@ -25,6 +25,11 @@ const reducer = (state, action) => {
         ...state,
         embarquesTerr: action.payload
       };
+    case "AEREO_REQUEST":
+      return {
+        ...state,
+        embarquesAer: action.payload
+      };
     case "FACTURAS_REQUEST":
       return {
         ...state,
