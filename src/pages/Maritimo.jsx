@@ -40,6 +40,7 @@ const Maritimo = props => {
 
   return (
     <>
+    <div className="principal">
     <div className="text-center traking">
       <h1 className="">Maritimo-Tracking</h1>
       <div className="d-flex justify-content-center">
@@ -81,6 +82,7 @@ const Maritimo = props => {
             )}
         </div>
       )}
+      </div>
     </>
   );
 };

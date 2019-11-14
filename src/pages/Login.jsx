@@ -63,7 +63,6 @@ const Login = props => {
                 Usuario y/o contraseña incorrectas
               </div>
             )}
-            <hr />
             <div className="botones">
               <button className="boton" type="submit" value="Login">
                 login

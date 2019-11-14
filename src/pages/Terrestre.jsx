@@ -35,8 +35,10 @@ const Terrestre = props => {
   };
 
   return (
+    <div className="principal">
     <div className="text-center traking">
       <h1>Land-Tracking </h1>
+      {/* INICIO DEL INPUT BUSQUEDA */}
       <div className="d-flex justify-content-center">
         <div>
           <input
@@ -55,7 +57,7 @@ const Terrestre = props => {
           </button>
         </div>
       </div>
-
+     {/* FIN DEL INPUT BUSQUEDA */}
       <div>
         {input.alert && (
           <div className="alert alert-danger" role="alert">
@@ -76,6 +78,7 @@ const Terrestre = props => {
           )}
         </div>
       )}
+    </div>
     </div>
   );
 };
