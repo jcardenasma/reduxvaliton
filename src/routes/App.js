@@ -7,7 +7,7 @@ import PrivateRoute from "../utils/PrivateRoute";
 import Terrestre from "../pages/Terrestre";
 import NotFound from "../pages/NotFound";
 import Factruas from "../pages/Facturas";
-
+import Aereo from "../pages/Aereo";
 
 const App = () => (
   <BrowserRouter>
@@ -19,6 +19,9 @@ const App = () => (
         </PrivateRoute>
         <PrivateRoute path="/terrestre">
           <Terrestre />
+        </PrivateRoute>
+        <PrivateRoute path="/aereo">
+          <Aereo />
         </PrivateRoute>
         <PrivateRoute path="/facturas">
           <Factruas />

@@ -16,11 +16,15 @@ export const terrestreRequest = payload => ({
   payload
 });
 
+export const aereoRequest = payload => ({
+  type: "AEREO_REQUEST",
+  payload
+});
+
 export const facturasRequest = payload => ({
   type: "FACTURAS_REQUEST",
   payload
 });
-
 
 export const setError = payload => ({
   type: "SET_ERROR",
@@ -79,7 +83,7 @@ export const getTerrestre = (section, payload) => {
   };
 };
 
-export const getFacturas = (section, payload) =>{
+export const getFacturas = (section, payload) => {
   return dispatch => {
     axios
       .get(`${URL}${section}/${payload}`, {
@@ -89,4 +93,16 @@ export const getFacturas = (section, payload) =>{
         dispatch(facturasRequest(response.data));
       });
   };
-}
+};
+
+export const getAereo = (section, payload) => {
+  return dispatch => {
+    axios
+      .get(`${URL}${section}/${payload}`, {
+        auth: AUTH
+      })
+      .then(function(response) {
+        dispatch(aereoRequest(response.data));
+      });
+  };
+};
