@@ -55,6 +55,7 @@ hr {
   display: flex;
   margin: auto;
   justify-content: center;
+  margin-top: 20px;
 }
 .boton {
   width: 70%;
