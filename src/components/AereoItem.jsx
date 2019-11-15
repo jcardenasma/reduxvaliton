@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/styles/components/TrakingItem.css";
 
-const AereoItem = propos => {
+const AereoItem = props => {
   return (
     <div className="ter">
       <div className="imgabout">
@@ -11,8 +11,8 @@ const AereoItem = propos => {
               <i class="fas fa-file-alt"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">OPERACION</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">Ciudad Origen</p>
+              <p>{props.origen}</p>
             </div>
           </div>
 
@@ -21,8 +21,8 @@ const AereoItem = propos => {
               <i class="fas fa-file"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">TIPO MOVIMIENTO</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">Aeropuerto Origen</p>
+              <p>{props.aeropuertoSalida}</p>
             </div>
           </div>
 

@@ -30,10 +30,7 @@ const Aereo = props => {
         consulta: true,
         filtrados: props.embarquesAer.filter(
           Aereo =>
-            Aereo.idFile === Number(input.busqueda) ||
-            Aereo.mbl.toLowerCase() === input.shipper  ||
-            Aereo.hbl.toLowerCase() === input.busqueda ||
-            Aereo.contenedores.toLowerCase() === input.busqueda
+            Aereo.idFileAer.toLowerCase() === input.busqueda
         )
       });
     } else setValues({ ...input, filtrados: [], alert: true });
@@ -88,7 +85,8 @@ const Aereo = props => {
 
 const MapStateProps = state => {
   return {
-    embarquesAer: state.embarquesAer
+    embarquesAer: state.embarquesAer,
+    loged: state.loged
   };
 };
 
