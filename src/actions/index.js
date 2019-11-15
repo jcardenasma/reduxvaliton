@@ -49,6 +49,7 @@ export const sendLogin = (section, payload, redirectURL, history) => {
       .then(({ data }) => {
         dispatch(loginReques(data));
         dispatch(getMaritimo("embarque", data.clave));
+        dispatch(getFacturas("getFacturas", data.clave));
       })
       .then(() => {
         history.push(redirectURL);

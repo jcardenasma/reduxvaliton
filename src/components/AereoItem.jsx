@@ -8,7 +8,7 @@ const AereoItem = props => {
         <div className="timeline">
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i class="fas fa-file-alt"></i>
+              <i className="fas fa-file-alt"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">Ciudad Origen</p>

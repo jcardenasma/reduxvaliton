@@ -37,7 +37,7 @@ const Aereo = props => {
   };
 
   return (
-    <>
+    <div className="principal">
       <div className="text-center traking">
         <h1 className="">Aereo-Tracking</h1>
         <div className="d-flex justify-content-center">
@@ -79,7 +79,7 @@ const Aereo = props => {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

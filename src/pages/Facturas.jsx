@@ -8,11 +8,13 @@ import "../assets/styles/components/Facturas.css";
 import FacturaItem from "../components/FacturaItem";
 
 const Factruas = props => {
+  
   useState(() => {
-    props.getFacturas("getFacturas", props.loged.clave)
+    props.getFacturas("getFacturas", props.loged.clave);
   });
 
-  const [input, setValues] = useState({
+  const [input, setValues] = useState(
+    {
     busqueda: null,
     filtrados: props.facturas
   });
