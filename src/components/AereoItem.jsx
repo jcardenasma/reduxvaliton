@@ -11,38 +11,58 @@ const AereoItem = props => {
               <i className="fas fa-file-alt"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">Ciudad Origen</p>
+              <p className="timeline-content-date">Reference</p>
+              <p>{props.idFileAer}</p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-icon">
+              <i class="fas fa-user-tag"></i>
+            </div>
+            <div className="timeline-content right">
+              <p className="timeline-content-date">Shipper</p>
+              <p>{props.shipper}</p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div className="timeline-content">
+              <p className="timeline-content-date">Consignee</p>
+              <p>{props.consignatario}</p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-icon">
+              <i className="fas fa-calendar-alt"></i>
+            </div>
+            <div className="timeline-content right">
+              <p className="timeline-content-date">Purcharse order</p>
+              <p>{props.ordenCompra}</p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-icon">
+              <i class="fas fa-truck-moving"></i>
+            </div>
+            <div className="timeline-content">
+              <p className="timeline-content-date">AOL</p>
               <p>{props.origen}</p>
             </div>
           </div>
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i class="fas fa-file"></i>
-            </div>
-            <div className="timeline-content right">
-              <p className="timeline-content-date">Aeropuerto Origen</p>
-              <p>{props.aeropuertoSalida}</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i class="fas fa-shipping-fast"></i>
-            </div>
-            <div className="timeline-content">
-              <p className="timeline-content-date">TIPO CAJA</p>
-              <p>{/* Esperando info */}</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
               <i className="fas fa-calendar-alt"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">FECHA CARGA</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">AOD</p>
+              <p>{props.destino}</p>
             </div>
           </div>
 
@@ -51,28 +71,8 @@ const AereoItem = props => {
               <i class="fas fa-truck-moving"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">ORIGEN</p>
-              <p>{/* Esperando info */}</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i className="fas fa-calendar-alt"></i>
-            </div>
-            <div className="timeline-content right">
-              <p className="timeline-content-date">FECHA DESCARGA</p>
-              <p>{/* Esperando info */}</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">
-              <i class="fas fa-truck-moving"></i>
-            </div>
-            <div className="timeline-content">
-              <p className="timeline-content-date">DESTINO</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">AWB</p>
+              <p>{props.awb}</p>
             </div>
           </div>
 
@@ -81,8 +81,8 @@ const AereoItem = props => {
               <i className="fas fa-clipboard-list"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">LINEA NACIONAL</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">HWB</p>
+              <p>{props.hwb}</p>
             </div>
           </div>
 
@@ -91,8 +91,8 @@ const AereoItem = props => {
               <i className="fas fa-receipt"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">LINEA INTERNACIONAL</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">ETD</p>
+              <p>{props.etd}</p>
             </div>
           </div>
 
@@ -101,8 +101,8 @@ const AereoItem = props => {
               <i class="fas fa-boxes"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">MERCANCIA</p>
-              <p>{/* Esperando info */}</p>
+              <p className="timeline-content-date">ETA</p>
+              <p>{props.eta}</p>
             </div>
           </div>
 
@@ -112,7 +112,7 @@ const AereoItem = props => {
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">STATUS</p>
-              <p>{/* Esperando info */}</p>
+              <p>{props.status}</p>
             </div>
           </div>
         </div>
