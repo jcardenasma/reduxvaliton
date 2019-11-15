@@ -6,21 +6,28 @@ const FacturaItem = (props) => {
   const callback = () =>{
     props.HandelHide();
   }
-
+  /* FUNCION PARA CONVERTIR A TIPO MONEDA */
+  const currencyformat = new Intl.NumberFormat('en-MX', {
+    style: 'currency',
+    currency: 'USD'
+  })
+  
   return (
     <div className="modalprincipal">
       <div className="submodal">
-        <p>{props.empresa}</p>
+        <p className="colortitulo"><b>{props.empresa === 'MXN' ?'VALITON CORP & LOGISTICS':'VALITON CORP & LOGISTIC'}</b></p>
       </div>
       <div className="modalcontenido">
-        <div className="cuadrotexto" style={{justifyContent: "space-between"}}>
+        {/* INICIO DE FACTURA Y FECHA */}
+        <div className="cuadrotexto" style={{justifyContent: "space-around"}}>
           <div>
-            <p>{props.noFactura}</p>
+            <p className="colortitulo"><b>{props.noFactura}</b></p>
           </div>
           <div>
-            <p>{props.fechaFact}</p>
+            <p className="colortitulo"><b>{props.fechaFact}</b></p>
           </div>
         </div>
+        {/* INICIO DE DATOS DENTRO DEL MODAL */}
         <div className="row">
           <div className="col-5">
             <p>
@@ -52,7 +59,7 @@ const FacturaItem = (props) => {
           <div className="col-5">
             <p>
               <b>Importe: </b>
-              <span className="salto">{props.importeFact}</span>
+              <span className="salto">{currencyformat.format(props.importeFact)}</span>
             </p>
           </div>
           <div className="col-7 ">

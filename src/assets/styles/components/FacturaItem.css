@@ -1,5 +1,5 @@
 .modalprincipal {
-  width: 680px;
+  width: 600px;
   position: relative;
   margin: 10% auto;
   border-radius: 10px;
@@ -17,6 +17,9 @@
 .submodal p {
   padding-top: 12px;
   text-align: center;
+}
+.colortitulo{
+  color: #62259d;
 }
 .modalDialog:target {
   opacity: 1;
@@ -63,7 +66,7 @@ b {
   font-size: 25px;
   line-height: 28px;
   text-decoration: none;
-  color: rgb(194, 0, 0, 0.6);
+  color: rgb(194, 0, 0, 0.8);
 }
 .cancelar:hover {
   color: rgb(194, 0, 0);

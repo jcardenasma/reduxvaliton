@@ -1,4 +1,11 @@
 
+.tablafactura{
+  text-align: left;
+  margin-top: 45px;
+  height: 60vh;
+  overflow: auto;
+}
+
 .titulotabla {
   width: 100%;
   height: 39px;
@@ -15,13 +22,8 @@
 .contenido i {
   font-size: 25px;
 }
-.tablafactura{
-  text-align: left;
-  margin-top: 45px;
-  height: 60vh;
-  overflow: auto;
- 
-}
+
+
 th {
   font-family: "Roboto";
   font-style: normal;
@@ -36,7 +38,7 @@ td {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 14px;
   align-items: center;
   color: #000000;
@@ -53,7 +55,13 @@ td {
 }
 
 @media screen and (max-width:960px){
-    .prioridad1{
+  .tablafactura{
+    margin-top: 25px;
+  }
+  .titulotabla {
+    height: 30px;
+  }
+  .prioridad1{
         display: none;
     }
     .contenido {
@@ -72,13 +80,23 @@ td {
    }
    @media screen and (max-width:720px){
     .tablafactura{
-      height: 25vh ;
+      height: 40vh ;
       overflow: auto;
     }
    }
    @media screen and (max-width:420px){
     .tablafactura{
-      height: 50vh ;
+      height: 65vh ;
       overflow: auto;
     }
+    th {
+      font-size: 14px;
+    }
+    td {
+      font-size: 11px;
+    }
+    .contenido i {
+      font-size: 20px;
+    }
+    
    }

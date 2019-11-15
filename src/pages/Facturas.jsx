@@ -23,7 +23,7 @@ const Factruas = props => {
       busqueda: event.target.value.toLowerCase()
     });
   };
-
+  
   const handleSubmit = () => {
     if (input.busqueda) {
       setValues({
@@ -62,12 +62,12 @@ const Factruas = props => {
         </div>
       </div>
       <div className= "tablafactura">
-        <table style={{ width: "100%"}}>
+        <table  style={{ width: "100%"}}>
           <thead>
             <tr className="titulotabla">
               <th>No Factura</th>
               <th>File</th>
-              <th className="prioridad1">Empresa Factura</th>
+               <th className="prioridad1">Empresa Factura</th>
               <th className="prioridad1">Divisa</th>
               <th className="prioridad1">Fecha de Pago</th>
               <th>Info</th>
@@ -80,9 +80,9 @@ const Factruas = props => {
               <tr className="contenido" key={item.cfdi}>
                 <td>{item.noFactura}</td>
                 <td>{item.noFile}</td>
-                <td className="prioridad1">{item.empresa}</td>
+            <td className="prioridad1">{item.empresa === 'MXN' ?'VALITON CORP & LOGISTICS':'VALITON CORP & LOGISTIC'}</td>
                 <td className="prioridad1">{item.codigoDivisa}</td>
-                <td className="prioridad1">{item.fechaFact}</td>
+                <td className="prioridad1">{item.fechaPago}</td>
                 <td>
                   <Toggle
                     toggle={show => (

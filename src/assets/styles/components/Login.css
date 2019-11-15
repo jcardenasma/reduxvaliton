@@ -42,12 +42,10 @@ hr {
   color: black;
   padding-right: 7px;
 }
-.alerta {
+
+.formulario .alert {
+  margin-top: 2%;
   color: red;
-}
-.formulario .alerta {
-  margin-left: 25px;
-  margin-top: 5%;
 }
 .botones {
   display: -webkit-box;
@@ -57,6 +55,7 @@ hr {
   display: flex;
   margin: auto;
   justify-content: center;
+  margin-top: 20px;
 }
 .boton {
   width: 70%;
@@ -74,26 +73,51 @@ hr {
   color: black;
   cursor: pointer;
 }
-
-@media (max-width: 600px) {
+@media screen and (max-width: 960px){
   .contenedor {
-    max-width: 250px;
-    height: 350px;
-    margin-top: 25%;
+    max-width: 450px;
+    height: 250px;
+    margin-top: 100px;
   }
   img {
     width: 100px;
   }
   .formulario input[type="text"],
   .formulario input[type="password"] {
-    height: 30px;
+    height: 25px;
   }
-  .formulario .alerta {
-    margin-left: 15px;
+  .formulario .alert {
+  font-size: 13px;
   }
   .boton {
     width: 70%;
     height: 30px;
     font-size: 20px;
   }
+  .formulario {
+    margin-top: -20px;
+  }
+  .boton {
+     margin-top: -10px;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .contenedor {
+    max-width: 250px;
+    height: 300px;
+    margin-top: 45%;
+  }
+  .boton {
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+  }
+  .formulario {
+    margin-top: -15px;
+  }
+  .boton {
+     margin-top: 10px;
+  }
+
 }
