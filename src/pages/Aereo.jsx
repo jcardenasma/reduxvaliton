@@ -22,7 +22,8 @@ const Aereo = props => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (input.busqueda) {
       setValues({
         ...input,
@@ -39,7 +40,8 @@ const Aereo = props => {
   return (
     <div className="principal">
       <div className="text-center traking">
-        <h1 className="">Aereo-Tracking</h1>
+        <h1 className="">Air-Tracking</h1>
+        <form onSubmit={handleSubmit}>
         <div className="d-flex justify-content-center">
           <div>
             <input
@@ -52,12 +54,13 @@ const Aereo = props => {
               aria-label="Recipient's username"
             ></input>
           </div>
-          <div onClick={handleSubmit}>
-            <button className="btn btn-info">
+          <div >
+            <button className="btn btn-info" type="submit">
               <i className="fas fa-search"></i>
             </button>
           </div>
         </div>
+        </form>
         <div>
           {input.alert && (
             <div className="alert alert-danger" role="alert">

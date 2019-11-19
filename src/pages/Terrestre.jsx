@@ -39,6 +39,7 @@ const Terrestre = props => {
     <div className="text-center traking">
       <h1>Land-Tracking </h1>
       {/* INICIO DEL INPUT BUSQUEDA */}
+      <form onSubmit={handleSubmit}>
       <div className="d-flex justify-content-center">
         <div>
           <input
@@ -51,12 +52,13 @@ const Terrestre = props => {
             aria-label="Recipient's username"
           ></input>
         </div>
-        <div onClick={handleSubmit}>
-          <button className="btn btn-info">
+        <div>
+          <button className="btn btn-info" type="submit">
             <i className="fas fa-search"></i>
           </button>
         </div>
       </div>
+      </form>
      {/* FIN DEL INPUT BUSQUEDA */}
       <div>
         {input.alert && (

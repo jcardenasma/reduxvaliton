@@ -38,7 +38,7 @@ const AereoItem = props => {
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-calendar-alt"></i>
+            <i className="fas fa-receipt"></i>
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">Purcharse order</p>
@@ -48,7 +48,7 @@ const AereoItem = props => {
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i class="fas fa-truck-moving"></i>
+            <i class="fas fa-plane-departure"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">AOL</p>
@@ -58,7 +58,7 @@ const AereoItem = props => {
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-calendar-alt"></i>
+            <i class="fas fa-plane-arrival"></i>
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">AOD</p>
@@ -68,7 +68,7 @@ const AereoItem = props => {
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i class="fas fa-truck-moving"></i>
+            <i className="fas fa-receipt"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">AWB</p>
@@ -88,7 +88,7 @@ const AereoItem = props => {
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i className="fas fa-receipt"></i>
+            <i className="fas fa-calendar-alt"></i>
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">ETD</p>
@@ -98,7 +98,7 @@ const AereoItem = props => {
 
           <div className="timeline-item">
             <div className="timeline-icon">
-              <i class="fas fa-boxes"></i>
+            <i className="fas fa-calendar-alt"></i>
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">ETA</p>
