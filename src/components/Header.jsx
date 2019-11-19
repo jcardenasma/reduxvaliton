@@ -41,27 +41,27 @@ const Header = props => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/maritimo">
-                  MARITIMO
+                  MARITIME
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/terrestre">
-                  TERRESTRE
+                  LAND
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/aereo">
-                  AEREO
+                  AIR
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/facturas">
-                  FACTURAS
+                  INVOICES
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" onClick={handleSubmit} to="/">
-                  SALIR
+                  EXIT
                 </Link>
               </li>
             </ul>

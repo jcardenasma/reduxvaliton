@@ -8,13 +8,11 @@ import "../assets/styles/components/Facturas.css";
 import FacturaItem from "../components/FacturaItem";
 
 const Factruas = props => {
-  
   useState(() => {
     props.getFacturas("getFacturas", props.loged.clave);
   });
 
-  const [input, setValues] = useState(
-    {
+  const [input, setValues] = useState({
     busqueda: null,
     filtrados: props.facturas
   });
@@ -25,8 +23,9 @@ const Factruas = props => {
       busqueda: event.target.value.toLowerCase()
     });
   };
-  
-  const handleSubmit = () => {
+
+  const handleSubmit = event => {
+    event.preventDefault();
     if (input.busqueda) {
       setValues({
         ...input,
@@ -39,40 +38,44 @@ const Factruas = props => {
       });
     } else setValues({ ...input, filtrados: props.facturas });
   };
-         
-  return ( /*INICIO DEL BOTON */
+
+  return (
+    /*INICIO DEL BOTON */
     <div className="principal">
       <div className="text-center traking">
         <h1>Invoices Statement</h1>
-        <div className="d-flex justify-content-center">
-          <div>
-            <input
-              id="date"
-              name="filterF"
-              type="text"
-              onChange={handleFinderChange}
-              className="form-control"
-              placeholder="Invoice / File / Date"
-              aria-label="Recipient's username"
-            ></input>
+        {/*INICIO INPUT BUSUQUEDA*/}
+        <form onSubmit={handleSubmit}>
+          <div className="d-flex justify-content-center">
+            <div>
+              <input
+                id="date"
+                name="filterF"
+                type="text"
+                onChange={handleFinderChange}
+                className="form-control"
+                placeholder="Invoice / File / Date"
+                aria-label="Recipient's username"
+              ></input>
+            </div>
+            <div>
+              <button className="btn btn-info" type="submit">
+                <i className="fas fa-search"></i>
+              </button>
+            </div>
           </div>
-          <div>
-            <button className="btn btn-info" onClick={handleSubmit}>
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
+        </form>
       </div>
-      <div className= "tablafactura">
-        <table  style={{ width: "100%"}}>
+      <div className="tablafactura">
+        <table style={{ width: "100%" }}>
           <thead>
             <tr className="titulotabla">
-              <th>No Factura</th>
+              <th>Invoice No.</th>
               <th>File</th>
-               <th className="prioridad1">Empresa Factura</th>
-              <th className="prioridad1">Divisa</th>
-              <th className="prioridad1">Fecha de Pago</th>
-              <th>Info</th>
+              <th className="prioridad1">Company</th>
+              <th className="prioridad1">Currency</th>
+              <th className="prioridad1">Payment date</th>
+              <th>Details</th>
               <th>Pdf</th>
               <th>Xml</th>
             </tr>
@@ -82,7 +85,11 @@ const Factruas = props => {
               <tr className="contenido" key={item.cfdi}>
                 <td>{item.noFactura}</td>
                 <td>{item.noFile}</td>
-            <td className="prioridad1">{item.empresa === 'MXN' ?'VALITON CORP & LOGISTICS':'VALITON CORP & LOGISTIC'}</td>
+                <td className="prioridad1">
+                  {item.empresa === "MXN"
+                    ? "VALITON CORP & LOGISTICS"
+                    : "VALITON CORP & LOGISTIC"}
+                </td>
                 <td className="prioridad1">{item.codigoDivisa}</td>
                 <td className="prioridad1">{item.fechaPago}</td>
                 <td>
@@ -111,7 +118,8 @@ const Factruas = props => {
                   </a>
                 </td>
                 <td>
-                  <a className = "xml"
+                  <a
+                    className="xml"
                     download={`${item.noFactura}.xml`}
                     href={`data:application/octet-stream;base64,${item.xmlEncode}`}
                   >
@@ -138,7 +146,4 @@ const MapDispathToProps = {
   getFacturas
 };
 
-export default connect(
-  MapStateProps,
-  MapDispathToProps
-)(Factruas);
+export default connect(MapStateProps, MapDispathToProps)(Factruas);

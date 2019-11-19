@@ -15,6 +15,7 @@ const Terrestre = props => {
   });
 
   const handleSubmit = event => {
+    event.preventDefault();
     if (input.busqueda) {
       setValues({
         ...input,

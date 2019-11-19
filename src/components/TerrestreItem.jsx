@@ -2,26 +2,8 @@ import React from "react";
 
 import "../assets/styles/components/TrakingItem.css";
 
-const TerrestreItem = ({
-  crm,
-  destino,
-  fechaArribo,
-  fechaCarga,
-  fechaDescarga,
-  frontera,
-  idFileTer,
-  lineaint,
-  lineanac,
-  mercancia,
-  operacion,
-  origen,
-  rutaInt,
-  rutaNac,
-  status,
-  tipoCaja,
-  tipoMovimiento,
-  cliente
-}) => {
+const TerrestreItem = props => {
+ 
   return (
 
     <div className="ter">
@@ -33,8 +15,8 @@ const TerrestreItem = ({
             <i class="fas fa-file-alt"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">OPERACION</p>
-              <p>{operacion}</p>
+              <p className="timeline-content-date">OPERATION</p>
+              <p>{props.operacion}</p>
             </div>
           </div>
 
@@ -43,8 +25,8 @@ const TerrestreItem = ({
             <i class="fas fa-file"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">TIPO MOVIMIENTO</p>
-              <p>{tipoMovimiento}</p>
+              <p className="timeline-content-date">TYPE</p>
+              <p>{props.tipoMovimiento}</p>
             </div>
           </div>
 
@@ -53,8 +35,8 @@ const TerrestreItem = ({
             <i class="fas fa-shipping-fast"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">TIPO CAJA</p>
-              <p>{tipoCaja}</p>
+              <p className="timeline-content-date">UNIT TYPE</p>
+              <p>{props.tipoCaja}</p>
             </div>
           </div>
 
@@ -63,8 +45,8 @@ const TerrestreItem = ({
               <i className="fas fa-calendar-alt"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">FECHA CARGA</p>
-              <p>{fechaCarga}</p>
+              <p className="timeline-content-date">DATE OF PICKUP</p>
+              <p>{props.fechaCarga}</p>
             </div>
           </div>
 
@@ -73,8 +55,8 @@ const TerrestreItem = ({
             <i class="fas fa-truck-moving"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">ORIGEN</p>
-              <p>{origen}</p>
+              <p className="timeline-content-date">FROM</p>
+              <p>{props.origen}</p>
             </div>
           </div>
 
@@ -83,8 +65,8 @@ const TerrestreItem = ({
               <i className="fas fa-calendar-alt"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">FECHA DESCARGA</p>
-              <p>{fechaDescarga}</p>
+              <p className="timeline-content-date">DELIVERY DATE</p>
+              <p>{props.fechaDescarga}</p>
             </div>
           </div>
 
@@ -93,8 +75,8 @@ const TerrestreItem = ({
             <i class="fas fa-truck-moving"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">DESTINO</p>
-              <p>{destino}</p>
+              <p className="timeline-content-date">TO</p>
+              <p>{props.destino}</p>
             </div>
           </div>
 
@@ -103,8 +85,8 @@ const TerrestreItem = ({
               <i className="fas fa-clipboard-list"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">LINEA NACIONAL</p>
-              <p>{lineanac}</p>
+              <p className="timeline-content-date">SUPPLIER NATIONAL</p>
+              <p>{props.lineanac}</p>
             </div>
           </div>
 
@@ -113,8 +95,8 @@ const TerrestreItem = ({
               <i className="fas fa-receipt"></i>
             </div>
             <div className="timeline-content">
-              <p className="timeline-content-date">LINEA INTERNACIONAL</p>
-              <p>{lineaint}</p>
+              <p className="timeline-content-date">SUPPLIER INTERNATIONAL</p>
+              <p>{props.lineaint}</p>
             </div>
           </div>
           
@@ -123,8 +105,8 @@ const TerrestreItem = ({
               <i class="fas fa-boxes"></i>
             </div>
             <div className="timeline-content right">
-              <p className="timeline-content-date">MERCANCIA</p>
-              <p>{mercancia}</p>
+              <p className="timeline-content-date">COMMODITY</p>
+              <p>{props.mercancia}</p>
             </div>
           </div>
 
@@ -135,7 +117,7 @@ const TerrestreItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">STATUS</p>
-              <p>{status}</p>
+              <p>{props.status}</p>
             </div>
           </div>
 

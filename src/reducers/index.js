@@ -36,6 +36,7 @@ const reducer = (state, action) => {
         facturas: action.payload
       };
     case "LOGOUT_REQUEST":
+      state = null
       return {
         ...state,
         loged: {},

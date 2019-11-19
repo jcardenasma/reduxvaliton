@@ -2,24 +2,8 @@ import React from "react";
 
 import "../assets/styles/components/TrakingItem.css";
 
-const MaritimoItem = ({
-  cntr20DC,
-  cntr40DC,
-  cntr40HQ,
-  cntrLCL,
-  contenedores,
-  eta,
-  etd,
-  hbl,
-  idFile,
-  mbl,
-  naviera,
-  pod,
-  pol,
-  status,
-  tipo,
-  viaje
-}) => {
+const MaritimoItem = props => {
+
   return (
     <div className="ter">
       <div className="imgabout" >
@@ -30,7 +14,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">ETA</p>
-              <p>{eta}</p>
+              <p>{props.eta}</p>
             </div>
           </div>
 
@@ -40,7 +24,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">FROM</p>
-              <p>{pol}</p>
+              <p>{props.pol}</p>
             </div>
           </div>
 
@@ -50,7 +34,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">ETD</p>
-              <p>{etd}</p>
+              <p>{props.etd}</p>
             </div>
           </div>
 
@@ -60,7 +44,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">TO</p>
-              <p>{pod}</p>
+              <p>{props.pod}</p>
             </div>
           </div>
 
@@ -70,7 +54,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">BOOKING</p>
-              <p>{mbl}</p>
+              <p>{props.mbl}</p>
             </div>
           </div>
 
@@ -80,7 +64,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date"> HBL</p>
-              <p>{hbl}</p>
+              <p>{props.hbl}</p>
             </div>
           </div>
 
@@ -90,7 +74,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">CONTAINER NUMBERS</p>
-              <p>{contenedores}</p>
+              <p>{props.contenedores}</p>
             </div>
           </div>
 
@@ -101,9 +85,9 @@ const MaritimoItem = ({
             <div className="timeline-content right">
               <p className="timeline-content-date">CONTAINER TYPE</p>
               <p>
-                CNT20: {cntr20DC} <br></br> CNT40DC: {cntr40DC}
-                <br></br>CNT40HQ: {cntr40HQ} <br></br>
-                CNTLCL: {cntrLCL}
+                CNT20: {props.cntr20DC} <br></br> CNT40DC: {props.cntr40DC}
+                <br></br>CNT40HQ: {props.cntr40HQ} <br></br>
+                CNTLCL: {props.cntrLCL}
               </p>
             </div>
           </div>
@@ -114,7 +98,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">SHIPPING</p>
-              <p>{naviera}</p>
+              <p>{props.naviera}</p>
             </div>
           </div>
 
@@ -124,7 +108,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">TYPE</p>
-              <p>{tipo}</p>
+              <p>{props.tipo}</p>
             </div>
           </div>
 
@@ -134,7 +118,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content">
               <p className="timeline-content-date">VOYAJE</p>
-              <p>{viaje}</p>
+              <p>{props.viaje}</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -143,7 +127,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content right">
               <p className="timeline-content-date">FILE</p>
-              <p>MAR{idFile}</p>
+              <p>MAR{props.idFile}</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -152,7 +136,7 @@ const MaritimoItem = ({
             </div>
             <div className="timeline-content left">
               <p className="timeline-content-date">STATUS</p>
-              <p>{status}</p>
+              <p>{props.status}</p>
             </div>
           </div>
         </div>
