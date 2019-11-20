@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### 'Crear producción para un subdominio'
+
+1. agregar el nombre del dominio en el archivo package.json
+   …
+   "private": true,
+   "homepage" : "http://dominio.com/subdominio/",
+   …
+2. actualizar la url base del react ruter
+   <BrowserRouter basename = "/ subdominio ">
