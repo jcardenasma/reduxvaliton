@@ -10,7 +10,7 @@ import Factruas from "../pages/Facturas";
 import Aereo from "../pages/Aereo";
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename = "/tracking">
     <Layout>
       <Switch>
         <Route exact path="/" component={Login} />
