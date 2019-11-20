@@ -75,4 +75,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
    "homepage" : "http://dominio.com/subdominio/",
    …
 2. actualizar la url base del react ruter
-   <BrowserRouter basename = "/ subdominio ">
+   `<BrowserRouter basename = "/ subdominio ">`
