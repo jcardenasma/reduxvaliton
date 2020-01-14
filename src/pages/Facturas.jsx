@@ -33,7 +33,8 @@ const Factruas = props => {
           factura =>
             factura.noFile.toLowerCase() === input.busqueda ||
             factura.noFactura.toLowerCase() === input.busqueda ||
-            factura.fechaFact.toLowerCase() === input.busqueda
+            factura.fechaFact.toLowerCase() === input.busqueda ||
+            factura.reference.toLowerCase() === input.busqueda
         )
       });
     } else setValues({ ...input, filtrados: props.facturas });
@@ -54,7 +55,7 @@ const Factruas = props => {
                 type="text"
                 onChange={handleFinderChange}
                 className="form-control"
-                placeholder="Invoice / File / Date"
+                placeholder="Invoice / File / Date / PO"
                 aria-label="Recipient's username"
               ></input>
             </div>
@@ -72,12 +73,16 @@ const Factruas = props => {
             <tr className="titulotabla">
               <th>Invoice No.</th>
               <th>File</th>
+              <th>PO</th>
               <th className="prioridad1">Company</th>
               <th className="prioridad1">Currency</th>
               <th className="prioridad1">Payment date</th>
               <th>Details</th>
               <th>Pdf</th>
               <th>Xml</th>
+              <th>Adjunto A</th>
+              <th>Adjunto B</th>
+              <th>Adjunto C</th>
             </tr>
           </thead>
           <tbody>
@@ -85,6 +90,7 @@ const Factruas = props => {
               <tr className="contenido" key={item.cfdi}>
                 <td>{item.noFactura}</td>
                 <td>{item.noFile}</td>
+                <td>{item.reference}</td>
                 <td className="prioridad1">
                   {item.empresa === "MXN"
                     ? "VALITON CORP & LOGISTICS"
@@ -125,6 +131,34 @@ const Factruas = props => {
                   >
                     <i className="fas fa-code"></i>
                   </a>
+                </td>
+                <td>
+                {item.archivoA===""?"":<a
+                    className="contenedor"
+                    download={item.nombreArchivoA}
+                    href={`data:application/octet-stream;base64,${item.archivoA}`}
+                  >
+                    <i className="fas fa-file-alt"></i>
+                  </a>}
+                </td>
+                <td>
+                  {item.archivoB===""?"":<a
+                    className="contenedor"
+                    download={item.nombreArchivoB}
+                    href={`data:application/octet-stream;base64,${item.archivoB}`}
+                  >
+                    <i className="fas fa-file-alt"></i>
+                  </a>}
+                  
+                </td>
+                <td>
+                {item.archivoC===""?"":<a
+                    className="contenedor"
+                    download={item.nombreArchivoC}
+                    href={`data:application/octet-stream;base64,${item.archivoC}`}
+                  >
+                    <i className="fas fa-file-alt"></i>
+                  </a>}
                 </td>
               </tr>
             ))}

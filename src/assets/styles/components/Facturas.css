@@ -2,7 +2,7 @@
 .tablafactura{
   text-align: left;
   margin-top: 45px;
-  height: 60vh;
+  height: 70vh;
   overflow: auto;
 }
 
@@ -52,6 +52,10 @@ td {
 }
 .xml{
   color: #000000;
+}
+
+.contenedor{
+  color: gray;
 }
 
 @media screen and (max-width:960px){
