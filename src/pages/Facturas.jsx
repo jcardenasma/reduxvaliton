@@ -133,32 +133,47 @@ const Factruas = props => {
                   </a>
                 </td>
                 <td>
-                {item.archivoA===""?"":<a
-                    className="contenedor"
-                    download={item.nombreArchivoA}
-                    href={`data:application/octet-stream;base64,${item.archivoA}`}
-                  >
-                    <i className="fas fa-file-alt"></i>
-                  </a>}
+                  {item.archivoA === "" ? (
+                    ""
+                  ) : (
+                    <a
+                      className="contenedor"
+                      download={item.nombreArchivoA}
+                      href={`data:application/octet-stream;base64,${item.archivoA}`}
+                    >
+                      {item.nombreArchivoA.substring (3,0) === "Soporte A-4695.pdf" ? (
+                        <i className="fas fa-file-pdf"></i>
+                      ) : (
+                        <i className="fas fa-file-alt"></i>
+                      )}
+                    </a>
+                  )}
                 </td>
                 <td>
-                  {item.archivoB===""?"":<a
-                    className="contenedor"
-                    download={item.nombreArchivoB}
-                    href={`data:application/octet-stream;base64,${item.archivoB}`}
-                  >
-                    <i className="fas fa-file-alt"></i>
-                  </a>}
-                  
+                  {item.archivoB === "" ? (
+                    ""
+                  ) : (
+                    <a
+                      className="contenedor"
+                      download={item.nombreArchivoB}
+                      href={`data:application/octet-stream;base64,${item.archivoB}`}
+                    >
+                      <i className="fas fa-file-alt"></i>
+                    </a>
+                  )}
                 </td>
                 <td>
-                {item.archivoC===""?"":<a
-                    className="contenedor"
-                    download={item.nombreArchivoC}
-                    href={`data:application/octet-stream;base64,${item.archivoC}`}
-                  >
-                    <i className="fas fa-file-alt"></i>
-                  </a>}
+                  {item.archivoC === "" ? (
+                    ""
+                  ) : (
+                    <a
+                      className="contenedor"
+                      download={item.nombreArchivoC}
+                      href={`data:application/octet-stream;base64,${item.archivoC}`}
+                    >
+                      <i className="fas fa-file-alt"></i>
+                    </a>
+                  )}
                 </td>
               </tr>
             ))}
