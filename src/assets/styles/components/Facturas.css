@@ -58,6 +58,12 @@ td {
   color: gray;
 }
 
+@media screen and (max-width:1400px){ 
+.prioridad1{
+  display: none;
+}
+}
+
 @media screen and (max-width:960px){
   .tablafactura{
     margin-top: 25px;
@@ -65,9 +71,7 @@ td {
   .titulotabla {
     height: 30px;
   }
-  .prioridad1{
-        display: none;
-    }
+
     .contenido {
       height: 35px;
     }
