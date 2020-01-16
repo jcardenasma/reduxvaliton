@@ -24,7 +24,23 @@ const Factruas = props => {
     });
   };
 
+const changeIcon = (a) =>{
+switch (a) {
+  case 'pdf':
+    return (<i className="fas fa-file-pdf"></i>);
+  case 'png':
+    return (<i className="fas fa-file-image"></i>);
+  case 'JPG':
+    return (<i className="fas fa-file-image"></i>);
+  case 'xlsx':
+    return (<i className="fas fa-file-excel"></i>);
+  case 'docx':
+    return (<i className="fas fa-file-word"></i>);
+  default:
+    return (<i className="fas fa-file-alt"></i>);
+}
 
+}
 
 const handleSubmit = event => {
   event.preventDefault();
@@ -82,9 +98,9 @@ return (
             <th>Details</th>
             <th>Pdf</th>
             <th>Xml</th>
-            <th>Adjunto A</th>
-            <th>Adjunto B</th>
-            <th>Adjunto C</th>
+            <th>Attachment A</th>
+            <th>Attachment B</th>
+            <th>Attachment C</th>
           </tr>
         </thead>
         <tbody>
@@ -144,12 +160,7 @@ return (
                       href={`data:application/octet-stream;base64,${item.archivoA}`}
                     >
                     
-
-                      {item.nombreArchivoA.split(".").pop() === "pdf" ? (
-                        <i className="fas fa-file-pdf"></i>
-                      ) : (
-                          <i className="fas fa-file-alt"></i>
-                        )}
+                      {changeIcon(item.nombreArchivoA.split(".").pop())}
                     </a>
                   )}
               </td>
@@ -162,7 +173,7 @@ return (
                       download={item.nombreArchivoB}
                       href={`data:application/octet-stream;base64,${item.archivoB}`}
                     >
-                      <i className="fas fa-file-alt"></i>
+                      {changeIcon(item.nombreArchivoB.split(".").pop())}
                     </a>
                   )}
               </td>
@@ -175,7 +186,7 @@ return (
                       download={item.nombreArchivoC}
                       href={`data:application/octet-stream;base64,${item.archivoC}`}
                     >
-                      <i className="fas fa-file-alt"></i>
+                      {changeIcon(item.nombreArchivoC.split(".").pop())}
                     </a>
                   )}
               </td>
