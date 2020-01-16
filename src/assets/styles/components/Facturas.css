@@ -47,6 +47,19 @@ td {
 .pdf {
   color: red;
 }
+
+.image{
+  color: gold;
+}
+
+.docx{
+  color: blue;
+}
+
+.xlsx{
+  color: green;
+}
+
 .pdf:hover{
   color: #000000;
 }

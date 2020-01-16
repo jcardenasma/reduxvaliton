@@ -24,20 +24,44 @@ const Factruas = props => {
     });
   };
 
-const changeIcon = (a) =>{
+const changeIcon = (a,b,c) =>{
 switch (a) {
   case 'pdf':
-    return (<i className="fas fa-file-pdf"></i>);
+    return (<a
+      className="pdf"
+      download={c}
+      href={`data:application/octet-stream;base64,${b}`}
+    ><i className="fas fa-file-pdf"></i></a>);
   case 'png':
-    return (<i className="fas fa-file-image"></i>);
+    return (<a
+      className="image"
+      download={c}
+      href={`data:application/octet-stream;base64,${b}`}
+    ><i className="fas fa-file-image"></i></a>);
   case 'JPG':
-    return (<i className="fas fa-file-image"></i>);
+    return (<a
+      className="image"
+      download={c}
+      href={`data:application/octet-stream;base64,${b}`}
+    ><i className="fas fa-file-image"></i></a>);
   case 'xlsx':
-    return (<i className="fas fa-file-excel"></i>);
+    return (<a
+      className="xlsx"
+      download={c}
+      href={`data:application/octet-stream;base64,${b}`}
+    ><i className="fas fa-file-excel"></i></a>);
   case 'docx':
-    return (<i className="fas fa-file-word"></i>);
+    return (<a
+      className="docx"
+      download={c}
+      href={`data:application/octet-stream;base64,${b}`}
+    ><i className="fas fa-file-word"></i></a>);
   default:
-    return (<i className="fas fa-file-alt"></i>);
+    return (<a
+      className="contenedor"
+      download={c}
+      href={`data:application/octet-stream;base64,${b}`}
+    ><i className="fas fa-file-alt"></i></a>);
 }
 
 }
@@ -154,40 +178,25 @@ return (
                 {item.archivoA === "" ? (
                   ""
                 ) : (
-                    <a
-                      className="contenedor"
-                      download={item.nombreArchivoA}
-                      href={`data:application/octet-stream;base64,${item.archivoA}`}
-                    >
-                    
-                      {changeIcon(item.nombreArchivoA.split(".").pop())}
-                    </a>
+                      changeIcon(item.nombreArchivoA.split(".").pop(),item.archivoA,item.nombreArchivoA)      
                   )}
               </td>
               <td>
                 {item.archivoB === "" ? (
                   ""
                 ) : (
-                    <a
-                      className="contenedor"
-                      download={item.nombreArchivoB}
-                      href={`data:application/octet-stream;base64,${item.archivoB}`}
-                    >
-                      {changeIcon(item.nombreArchivoB.split(".").pop())}
-                    </a>
+                    
+                      changeIcon(item.nombreArchivoB.split(".").pop(),item.archivoB,item.nombreArchivoB)
+                  
                   )}
               </td>
               <td>
                 {item.archivoC === "" ? (
                   ""
                 ) : (
-                    <a
-                      className="contenedor"
-                      download={item.nombreArchivoC}
-                      href={`data:application/octet-stream;base64,${item.archivoC}`}
-                    >
-                      {changeIcon(item.nombreArchivoC.split(".").pop())}
-                    </a>
+                    
+                    changeIcon(item.nombreArchivoC.split(".").pop(),item.archivoC,item.nombreArchivoC)
+                    
                   )}
               </td>
             </tr>
