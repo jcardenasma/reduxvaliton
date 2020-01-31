@@ -107,3 +107,20 @@ export const getAereo = (section, payload) => {
       });
   };
 };
+
+
+export const sendAttachment = (section, payload) => {
+  return dispatch => {
+    axios
+      .post(
+        `${URL}${section}`,
+        {payload},
+        {
+          auth: AUTH
+        }
+      )
+      .then(({ data }) => {
+        console.log (data)
+      });
+  };
+};

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { getFacturas } from "../actions";
+import { getFacturas , sendAttachment } from "../actions";
 import { Toggle, Modal } from "../utils/modalUtil";
 
 import "../assets/styles/components/Traking.css";
@@ -24,44 +24,52 @@ const Factruas = props => {
     });
   };
 
-const changeIcon = (a,b,c) =>{
+  const getEncodeFactura = (factura,nomarchivo,campo) => {
+    //Declarando estado del formulario
+    const archivo = {
+      factNum: factura.factNum,
+      nombreArchivoA: campo === "nombreArchivoA" ? nomarchivo : "",
+      nombreArchivoB: campo === "nombreArchivoB" ? nomarchivo : "",
+      nombreArchivoC: campo === "nombreArchivoC" ? nomarchivo : "",
+      nombrePdf: campo === null ? factura.nombrePdf : ""
+    };
+    props.sendAttachment('getEncodeFactura', archivo);
+  }
+
+
+
+const changeIcon = (a,item,c,campo) =>{
 switch (a) {
   case 'pdf':
-    return (<a
-      className="pdf"
-      download={c}
-      href={`data:application/octet-stream;base64,${b}`}
-    ><i className="fas fa-file-pdf"></i></a>);
+    return (<button
+      className="pdf btn btn-link"
+      onClick = {()=>getEncodeFactura(item,c,campo)}
+    ><i className="fas fa-file-pdf"></i></button>);
   case 'png':
-    return (<a
-      className="image"
-      download={c}
-      href={`data:application/octet-stream;base64,${b}`}
-    ><i className="fas fa-file-image"></i></a>);
+    return (<button
+      className="image btn btn-link"
+      onClick = {()=>getEncodeFactura(item,c,campo)}
+    ><i className="fas fa-file-image"></i></button>);
   case 'JPG':
-    return (<a
-      className="image"
-      download={c}
-      href={`data:application/octet-stream;base64,${b}`}
-    ><i className="fas fa-file-image"></i></a>);
+    return (<button
+      className="image btn btn-link"
+      onClick = {()=>getEncodeFactura(item,c,campo)}
+    ><i className="fas fa-file-image"></i></button>);
   case 'xlsx':
-    return (<a
-      className="xlsx"
-      download={c}
-      href={`data:application/octet-stream;base64,${b}`}
-    ><i className="fas fa-file-excel"></i></a>);
+    return (<button
+      className="xlsx btn btn-link"
+      onClick = {()=>getEncodeFactura(item,c,campo)}
+    ><i className="fas fa-file-excel"></i></button>);
   case 'docx':
-    return (<a
-      className="docx"
-      download={c}
-      href={`data:application/octet-stream;base64,${b}`}
-    ><i className="fas fa-file-word"></i></a>);
+    return (<button
+      className="docx btn btn-link"
+      onClick = {()=>getEncodeFactura(item,c,campo)}
+    ><i className="fas fa-file-word"></i></button>);
   default:
-    return (<a
-      className="contenedor"
-      download={c}
-      href={`data:application/octet-stream;base64,${b}`}
-    ><i className="fas fa-file-alt"></i></a>);
+    return (<button
+      className="contenedordefault"
+      onClick = {()=>getEncodeFactura(item,c,campo)}
+    ><i className="fas fa-file-alt"></i></button>);
 }
 
 }
@@ -157,13 +165,12 @@ return (
                 />
               </td>
               <td>
-                <a
-                  className="pdf"
-                  download={item.nombrePdf}
-                  href={`data:application/octet-stream;base64,${item.pdfEncode}`}
+                <button
+                  className="pdf btn btn-link"
+                  onClick = {()=>getEncodeFactura(item,null,null)}
                 >
                   <i className="fas fa-file-pdf"></i>
-                </a>
+                </button>
               </td>
               <td>
                 <a
@@ -175,27 +182,27 @@ return (
                 </a>
               </td>
               <td>
-                {item.archivoA === "" ? (
+                {item.nombreArchivoA === "" ? (
                   ""
                 ) : (
-                      changeIcon(item.nombreArchivoA.split(".").pop(),item.archivoA,item.nombreArchivoA)      
+                      changeIcon(item.nombreArchivoA.split(".").pop(),item,item.nombreArchivoA,"nombreArchivoA")      
                   )}
               </td>
               <td>
-                {item.archivoB === "" ? (
+                {item.nombreArchivoB === "" ? (
                   ""
                 ) : (
                     
-                      changeIcon(item.nombreArchivoB.split(".").pop(),item.archivoB,item.nombreArchivoB)
+                      changeIcon(item.nombreArchivoB.split(".").pop(),item,item.nombreArchivoB,"nombreArchivoB")
                   
                   )}
               </td>
               <td>
-                {item.archivoC === "" ? (
+                {item.nombreArchivoC === "" ? (
                   ""
                 ) : (
                     
-                    changeIcon(item.nombreArchivoC.split(".").pop(),item.archivoC,item.nombreArchivoC)
+                    changeIcon(item.nombreArchivoC.split(".").pop(),item,item.nombreArchivoC,"nombreArchivoC")
                     
                   )}
               </td>
@@ -216,7 +223,8 @@ const MapStateProps = state => {
 };
 
 const MapDispathToProps = {
-  getFacturas
+  getFacturas,
+  sendAttachment
 };
 
 export default connect(MapStateProps, MapDispathToProps)(Factruas);
