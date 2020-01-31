@@ -109,7 +109,11 @@ export const getAereo = (section, payload) => {
 };
 
 
+
 export const sendAttachment = (section, payload) => {
+  var download
+  var linkfile
+  var nombres
   return dispatch => {
     axios
       .post(
@@ -121,6 +125,32 @@ export const sendAttachment = (section, payload) => {
       )
       .then(({ data }) => {
         console.log (data)
+        download = document.createElement("a")
+        linkfile = `data:application/octet-stream;base64,${data.encode}`
+        nombres = data.nombre
+      }).finally(()=>{
+        let blob = dataURIToBlob(linkfile);
+        let url = global.URL.createObjectURL(blob);
+        download.href = url;
+        download.download = nombres;
+        download.click();
       });
   };
 };
+
+function dataURIToBlob(dataURI) {
+
+  var binStr = atob(dataURI.split(',')[1]),
+    len = binStr.length,
+    arr = new Uint8Array(len),
+    mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+
+  for (var i = 0; i < len; i++) {
+    arr[i] = binStr.charCodeAt(i);
+  }
+
+  return new Blob([arr], {
+    type: mimeString
+  });
+
+}
