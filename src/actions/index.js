@@ -114,7 +114,7 @@ export const sendAttachment = (section, payload) => {
     axios
       .post(
         `${URL}${section}`,
-        {payload},
+        payload,
         {
           auth: AUTH
         }
