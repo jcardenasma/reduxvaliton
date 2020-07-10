@@ -19,7 +19,7 @@ const Header = props => {
         <nav className="navbar navbar-expand-lg fixed-top">
           <a
             className="navbar-brand"
-            href="http://valcal.appadministracion.com/"
+            href="http://valitoncorp.com/"
           >
             <img src={logo} alt="" />
           </a>
@@ -75,7 +75,7 @@ const Header = props => {
         <nav className="navbar navbar-expand-lg fixed-top">
           <a
             className="navbar-brand"
-            href="http://valcal.appadministracion.com/"
+            href="http://valitoncorp.com/"
           >
             <img src={logo} alt="" />
           </a>
@@ -98,7 +98,7 @@ const Header = props => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://valcal.appadministracion.com/about.html"
+                  href="http://valitoncorp.com/about.html"
                 >
                   ABOUT US
                 </a>
@@ -106,7 +106,7 @@ const Header = props => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://valcal.appadministracion.com/service.html"
+                  href="http://valitoncorp.com/service.html"
                 >
                   SERVICES
                 </a>
@@ -114,7 +114,7 @@ const Header = props => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://valcal.appadministracion.com/quote.html"
+                  href="http://valitoncorp.com/quote.html"
                 >
                   QUOTE ME
                 </a>
@@ -127,7 +127,7 @@ const Header = props => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://valcal.appadministracion.com/contact.php"
+                  href="http://valitoncorp.com/contact.php"
                 >
                   CONTACT US
                 </a>
